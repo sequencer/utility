@@ -50,6 +50,8 @@ class utility extends CommonModule { m =>
 
   private val chisel3Plugin = getVersion("chisel3-plugin", cross = true)
 
+  override def scalacOptions = Seq("-Xsource:2.11")
+
   override def scalacPluginIvyDeps = if (chisel3Module.isEmpty) Agg(chisel3Plugin) else Agg.empty[Dep]
 
   // add some scala ivy module you like here.

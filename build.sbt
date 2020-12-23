@@ -6,6 +6,7 @@ lazy val commonSettings = Seq(
   organization := "org.chipsalliance",
   version      := "0.1",
   scalaVersion := "2.12.12",
+  scalacOptions ++= Seq("-Xsource:2.11"),
   parallelExecution in Global := false,
   libraryDependencies ++= Seq("org.scalatest" %% "scalatest" % "3.2.0" % "test"),
   resolvers ++= Seq(
